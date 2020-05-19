@@ -5,3 +5,5 @@
 *.db
 *.opendb
 *.ipch
+/Pointer/001_VIrtualAddressSpaceLayout/Debug
+/Pointer/Debug
