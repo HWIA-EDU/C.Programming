@@ -1,41 +1,33 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include < conio.h >
 #define PRINT_ADDR(var) printf("=========> %s \t\t %p\n", #var, var);
 
-char szTitle[] = "Message Enter";
- 
-void getMessage(char* buf, int size) {
+/* 
+사용자가 입력한 수 만큼 입의의 렌덤한 
+수를 생성하는 프로그램
+*/
+int* buffer = NULL;
 
-	PRINT_ADDR(getMessage);
-	PRINT_ADDR(&buf);
-	PRINT_ADDR(&size);
-
-	printf("%s : ", szTitle);
-	scanf_s("%s", buf, size);
+void genRandom(int cnt) {
+	srand(time(NULL));
+	for (int i = 0; i < cnt;i++) {
+		buffer[i] = rand();
+	}
 }
 
 int main() {
-	const int bufSize = 32;
-	char* msgBuf = NULL;
+	int count = 0;
+	printf("생성할 수를 입력하세요 : ");
+	scanf_s("%d", &count);
 
-	msgBuf = malloc(bufSize);
-
-	PRINT_ADDR(szTitle);
-	PRINT_ADDR(main);
-	PRINT_ADDR(&bufSize);
-	PRINT_ADDR(&msgBuf);
-	PRINT_ADDR(msgBuf);
-
-	getMessage(msgBuf, bufSize);
-
-	printf("Message : %s\n", msgBuf);
-
-	printf("Enter!!");
-
-	(void)_getch();
-
-	free(msgBuf);
-
+	buffer = malloc(sizeof(int)*count);
+	if (buffer != NULL) {
+		genRandom(count);
+		for (int i = 0; i < count; i++) {
+			printf("%d\n", buffer[i]);
+		}
+		free(buffer);
+	}
+	
 	return 0;
 }
