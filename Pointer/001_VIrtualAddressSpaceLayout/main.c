@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include < conio.h >
 #define PRINT_ADDR(var) printf("=========> %s \t\t %p\n", #var, var);
 
 char szTitle[] = "Message Enter";
@@ -32,7 +32,8 @@ int main() {
 	printf("Message : %s\n", msgBuf);
 	
 	printf("Enter!!");
-	getch();
+
+	(void)_getch();
 
 	free(msgBuf);
 
