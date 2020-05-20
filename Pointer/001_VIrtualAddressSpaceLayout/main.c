@@ -5,6 +5,7 @@
 
 #include <stdio.h>
 #include <time.h>
+#include <stdlib.h>
 
 void createData(int cnt);
 void showData(int cnt);
