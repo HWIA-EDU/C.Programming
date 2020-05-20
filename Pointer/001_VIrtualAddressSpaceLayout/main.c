@@ -1,40 +1,41 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <conio.h>
-#include <string.h>
-#define PRINT_ADDR(var) printf("%s\t\t\t%p\n", #var, var);
+#include < conio.h >
+#define PRINT_ADDR(var) printf("=========> %s \t\t %p\n", #var, var);
 
-int sum = 0;
+char szTitle[] = "Message Enter";
 
-void calc(int start, int end) {
-	sum = 0;
-	for (int i = start; i <= end; i++) {
-		sum += i;
-	}
+void getMessage(char* buf, int size) {
 
-	char* msg = malloc(1024);
-	if (NULL != msg) {
-		memset(msg, 0, 1024);
-		snprintf(msg, 1024, "\n¥Ò(%d,%d) = %d\n\n", start, end, sum);
-		printf(msg);
-		free(msg);
-	}
+	PRINT_ADDR(getMessage);
+	PRINT_ADDR(&buf);
+	PRINT_ADDR(&size);
+
+	printf("%s : ", szTitle);
+	scanf_s("%s", buf, size);
 }
 
 int main() {
-	int start;
-	int end;
+	const int bufSize = 32;
+	char* msgBuf = NULL;
 
-	while (1) {
-		
-		printf("begin number : ");
-		scanf_s("%d", &start);
+	msgBuf = malloc(bufSize);
 
-		printf("end number : ");
-		scanf_s("%d", &end);
-	
-		calc(start, end);
-	}
+	PRINT_ADDR(szTitle);
+	PRINT_ADDR(main);
+	PRINT_ADDR(&bufSize);
+	PRINT_ADDR(&msgBuf);
+	PRINT_ADDR(msgBuf);
+
+	getMessage(msgBuf, bufSize);
+
+	printf("Message : %s\n", msgBuf);
+
+	printf("Enter!!");
+
+	(void)_getch();
+
+	free(msgBuf);
 
 	return 0;
 }
