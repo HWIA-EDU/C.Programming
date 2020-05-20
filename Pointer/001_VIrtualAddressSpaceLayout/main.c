@@ -1,15 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include < conio.h >
-#define PRINT_ADDR(var) printf("=========> %s \t\t %p\n", #var, var);
+#define PRINT_ADDR(var) printf("%s\t\t\t%p\n", #var, var);
 
 char szTitle[] = "Message Enter";
 
 void getMessage(char* buf, int size) {
 
+	/*
 	PRINT_ADDR(getMessage);
 	PRINT_ADDR(&buf);
 	PRINT_ADDR(&size);
+	*/
 
 	printf("%s : ", szTitle);
 	scanf_s("%s", buf, size);
@@ -21,11 +23,13 @@ int main() {
 
 	msgBuf = malloc(bufSize);
 	
+	/*
 	PRINT_ADDR(szTitle);
 	PRINT_ADDR(main);
 	PRINT_ADDR(&bufSize);
 	PRINT_ADDR(&msgBuf);
 	PRINT_ADDR(msgBuf);
+	*/
 
 	getMessage(msgBuf, bufSize);
 
