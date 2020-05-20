@@ -7,3 +7,5 @@
 *.ipch
 /Pointer/001_VIrtualAddressSpaceLayout/Debug
 /Pointer/Debug
+/Pointer/001_VIrtualAddressSpaceLayout/Release
+/Pointer/Release
