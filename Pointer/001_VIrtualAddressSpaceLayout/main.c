@@ -8,25 +8,34 @@
 */
 int* buffer = NULL;
 
-void genRandom(int cnt) {
+void createData(int cnt) {
 	srand(time(NULL));
 	for (int i = 0; i < cnt;i++) {
 		buffer[i] = rand();
 	}
 }
 
-int main() {
-	int count = 0;
-	printf("생성할 수를 입력하세요 : ");
-	scanf_s("%d", &count);
+void showData(int cnt) {
+	for (int i = 0; i < cnt; i++) {
+		printf("%d\n", buffer[i]);
+	}
+}
 
-	buffer = malloc(sizeof(int)*count);
-	if (buffer != NULL) {
-		genRandom(count);
-		for (int i = 0; i < count; i++) {
-			printf("%d\n", buffer[i]);
+int main() {
+
+	while (1) {
+		int count = 0;
+
+		printf("생성할 수를 입력하세요 : ");
+		scanf_s("%d", &count);
+
+		buffer = malloc(sizeof(int) * count);
+		if (buffer != NULL) {
+			createData(count);
+			showData(count);
+			printf("힙 할당 영역 : %p\n", buffer);
+			free(buffer);
 		}
-		free(buffer);
 	}
 	
 	return 0;
