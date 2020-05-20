@@ -4,7 +4,7 @@
 #define PRINT_ADDR(var) printf("=========> %s \t\t %p\n", #var, var);
 
 char szTitle[] = "Message Enter";
-
+ 
 void getMessage(char* buf, int size) {
 
 	PRINT_ADDR(getMessage);
