@@ -2,9 +2,6 @@
 # 이 .gitignore 파일은 Microsoft(R) Visual Studio에서 자동으로 만들어졌습니다.
 ################################################################################
 
-*.db
-*.opendb
-*.ipch
 /Pointer/001_VIrtualAddressSpaceLayout/Debug
 /Pointer/Debug
 /Pointer/001_VIrtualAddressSpaceLayout/Release
