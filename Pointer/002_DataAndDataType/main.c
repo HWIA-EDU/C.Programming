@@ -11,6 +11,7 @@ int main() {
 	char arr[] = { 65, 66, 67,0 };
 	printf("%s\n", &arr);
 
+	//메모리 내용을 출력
 	int n = 4407873;
 	printf("%s\n",&n);
 	

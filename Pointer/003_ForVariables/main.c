@@ -6,19 +6,20 @@ struct Point {
 };
 
 int main() {
+
+	//sizeof(char)의 메모리 확보
 	char c = 'A';
-	printf("%c\n", c);
+	printf("size : %d\n", sizeof(char));
 
+	//sizeof(int)의 메모리 확보
 	int n = 100;
-	printf("%d\n", n);
+	printf("size : %d\n", sizeof(int));
 
+	//sizeof(struct Point)의 메모리 확보
 	struct Point pt = { 10, 20 };
-	printf("%d, %d\n", pt.x, pt.y);
+	printf("size : %d\n", sizeof(struct Point));
 
+	//sizeof(int[2][3])의 메모리 확보
 	int arr[2][3] = { {1,2,3},{4,5,6} };
-	for (int i = 0; i < 2; i++) {
-		for (int j = 0; j < 3; j++) {
-			printf("%d\n", arr[i][j]);
-		}
-	}
+	printf("size : %d\n", sizeof(int[2][3]));
 }
