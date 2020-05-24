@@ -1,16 +1,9 @@
 #include <stdio.h>
-
-struct Point {
-	int x;
-	int y;
-};
-
-typedef int ARRAY_5INT[5];
 int main() {
-
-	printf("%d", sizeof(int[5]));
-
-	ARRAY_5INT arr;
-	
-	return 0;
+	int arr[2][3] = { {1,2,3},{4,5,6} };
+	for (int i = 0; i < 2; i++) {
+		for (int j = 0; j < 3; j++) {
+			printf("%d\n", arr[i][j]);
+		}
+	}
 }
