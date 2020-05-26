@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "003_Variable", "003_ForVari
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloWorld", "HelloWorld\HelloWorld.vcxproj", "{B509F0B0-C19C-43A6-9606-547517C44BBC}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "004_PointerVariable", "004_PointerVariable\004_PointerVariable.vcxproj", "{6E0279DA-9E37-4F0D-B576-556C3CE5985D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -51,6 +53,14 @@ Global
 		{B509F0B0-C19C-43A6-9606-547517C44BBC}.Release|x64.Build.0 = Release|x64
 		{B509F0B0-C19C-43A6-9606-547517C44BBC}.Release|x86.ActiveCfg = Release|Win32
 		{B509F0B0-C19C-43A6-9606-547517C44BBC}.Release|x86.Build.0 = Release|Win32
+		{6E0279DA-9E37-4F0D-B576-556C3CE5985D}.Debug|x64.ActiveCfg = Debug|x64
+		{6E0279DA-9E37-4F0D-B576-556C3CE5985D}.Debug|x64.Build.0 = Debug|x64
+		{6E0279DA-9E37-4F0D-B576-556C3CE5985D}.Debug|x86.ActiveCfg = Debug|Win32
+		{6E0279DA-9E37-4F0D-B576-556C3CE5985D}.Debug|x86.Build.0 = Debug|Win32
+		{6E0279DA-9E37-4F0D-B576-556C3CE5985D}.Release|x64.ActiveCfg = Release|x64
+		{6E0279DA-9E37-4F0D-B576-556C3CE5985D}.Release|x64.Build.0 = Release|x64
+		{6E0279DA-9E37-4F0D-B576-556C3CE5985D}.Release|x86.ActiveCfg = Release|Win32
+		{6E0279DA-9E37-4F0D-B576-556C3CE5985D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
