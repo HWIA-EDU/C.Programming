@@ -1,29 +1,32 @@
+#include <windows.h>
 #include <stdio.h>
-#include "../trace/trace.h"
+
+#define TRACE(fmt,...) {\
+	char _c_buf[1024] = { 0, };\
+	_snprintf_s(_c_buf,sizeof(_c_buf),sizeof(_c_buf),"% 3d > " fmt, __LINE__, __VA_ARGS__);\
+	OutputDebugString(_c_buf);\
+	printf(_c_buf);\
+}
 
 int main() {
-	
-	int num = 0;
-	num = 100;
+	/* 일반 초기화 */
+	int num = 100;
 	TRACE("&num : %p\n", &num);
 	TRACE("num : %d\n", num);
 
+	/* 포인터변수 초기화*/
 	int* ptr = NULL;
-	TRACE("&ptr : %p\n",&ptr);
-	TRACE("ptr  : %p\n", ptr);
+	TRACE("&ptr : %p\n", &ptr);
+	TRACE("ptr : %p\n", ptr);
 
+	/* num 의 메모리 주소를 포인터 ptr에 저장 */
 	ptr = &num;
 	TRACE("ptr : %p\n", ptr);
 
-	*ptr = 100;
-	TRACE("ptr : %p\n", ptr);
-	TRACE("*ptr : %d\n", *ptr);
-	TRACE("num : %d\n", num);
-
-	num = 200;
-	TRACE("num : %d\n", num);
+	/* 간접참조 연산자를 통해서 값 읽기 */
 	TRACE("*ptr : %d\n", *ptr);
 
-	//컴파일 옵션(프로젝트 > 속성 > 링커 > 고급 > 임의 기준 주소)
-	//임의 기준 주소를 비활성(/DYNAMICBASE:NO)후 테스트 
+	/* 간접참조 연산자를 통해서 값 쓰기 */
+	*ptr = 500;
+	TRACE("num : %d\n", num);
 }
