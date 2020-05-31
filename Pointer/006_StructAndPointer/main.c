@@ -63,7 +63,7 @@ int main() {
 	TRACE("pos.x = %d\n", pos.x);
 	TRACE("pos.y = %d\n", pos.y);
 
-	//간접참조 ,Arrow 연산자를 이용한 멤버 주소 접근
+	//간접참조 ,Arrow 연산자를 이용한 멤버 주소 얻기
 	TRACE("&pos.x = %p\n", &(*ptr).x);
 	TRACE("&pos.y = %p\n", &ptr->y);
 
