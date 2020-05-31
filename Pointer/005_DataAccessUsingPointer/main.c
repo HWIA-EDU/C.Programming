@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include <stdarg.h>
 
+#include <stdarg.h>
 #include <windows.h>
 void _trace(const char* fmt, ...) {
 	char _cbuf[102] = { 0, };
