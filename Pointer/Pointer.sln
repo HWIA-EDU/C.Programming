@@ -15,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "005_DataAccessUsingPointer"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "006_StructAndPointer", "006_StructAndPointer\006_StructAndPointer.vcxproj", "{5BCDEE35-F983-4454-8137-349A6EB5A88F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "007_PointerTypeCast", "007_PointerTypeCast\007_PointerTypeCast.vcxproj", "{546E4244-6374-4E0D-81FF-DFBAC9383AA9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -71,6 +73,14 @@ Global
 		{5BCDEE35-F983-4454-8137-349A6EB5A88F}.Release|x64.Build.0 = Release|x64
 		{5BCDEE35-F983-4454-8137-349A6EB5A88F}.Release|x86.ActiveCfg = Release|Win32
 		{5BCDEE35-F983-4454-8137-349A6EB5A88F}.Release|x86.Build.0 = Release|Win32
+		{546E4244-6374-4E0D-81FF-DFBAC9383AA9}.Debug|x64.ActiveCfg = Debug|x64
+		{546E4244-6374-4E0D-81FF-DFBAC9383AA9}.Debug|x64.Build.0 = Debug|x64
+		{546E4244-6374-4E0D-81FF-DFBAC9383AA9}.Debug|x86.ActiveCfg = Debug|Win32
+		{546E4244-6374-4E0D-81FF-DFBAC9383AA9}.Debug|x86.Build.0 = Debug|Win32
+		{546E4244-6374-4E0D-81FF-DFBAC9383AA9}.Release|x64.ActiveCfg = Release|x64
+		{546E4244-6374-4E0D-81FF-DFBAC9383AA9}.Release|x64.Build.0 = Release|x64
+		{546E4244-6374-4E0D-81FF-DFBAC9383AA9}.Release|x86.ActiveCfg = Release|Win32
+		{546E4244-6374-4E0D-81FF-DFBAC9383AA9}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
