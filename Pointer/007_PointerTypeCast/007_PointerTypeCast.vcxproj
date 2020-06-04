@@ -23,6 +23,7 @@
     <ProjectGuid>{546E4244-6374-4E0D-81FF-DFBAC9383AA9}</ProjectGuid>
     <RootNamespace>My007PointerTypeCast</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>007_PointerTypeCast</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
