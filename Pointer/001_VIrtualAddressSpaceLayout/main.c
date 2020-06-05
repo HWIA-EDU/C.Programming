@@ -4,8 +4,9 @@
 */
 
 #include <stdio.h>
-#include <time.h>
 #include <stdlib.h>
+#include <time.h>
+#include "../000_DebugMode/trace.h"
 
 void createData(int cnt);
 void showData(int cnt);
@@ -31,7 +32,7 @@ int main()
 
 void createData(int cnt) 
 {
-	srand(time(NULL));
+	srand((unsigned int)time(NULL));
 	for (int i = 0; i < cnt; i++) {
 		buffer[i] = rand();
 	}
@@ -40,6 +41,6 @@ void createData(int cnt)
 void showData(int cnt) 
 {
 	for (int i = 0; i < cnt; i++) {
-		printf("%d\n", buffer[i]);
+		TRACE("%d\n", buffer[i]);
 	}
 }

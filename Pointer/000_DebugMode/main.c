@@ -1,29 +1,40 @@
+#include "trace.h"
 #include <stdio.h>
+#include <time.h>
 
-#include <stdarg.h>
-#include <windows.h>
-void _trace(const char* fmt, ...) {
-	char _cbuf[1024] = { 0, };
-	va_list args;
+void createData(int cnt);
+void showData(int cnt);
 
-	va_start(args, fmt);
-	vsnprintf_s(_cbuf, sizeof(_cbuf), sizeof(_cbuf), fmt, args);
-	va_end(args);
+int* buffer = NULL;
 
-	//디버그 모드시에 출력창에 메시지를 출력
-	OutputDebugString(_cbuf);
+int main()
+{
+	int count = 0;
 
-	//콘솔화면에 출력
-	printf("%s", _cbuf);
+	printf("Enter Number : ");
+	scanf_s("%d", &count);
+
+	buffer = malloc(sizeof(int) * count);
+	if (buffer != NULL) {
+		createData(count);
+		showData(count);
+		free(buffer);
+	}
+
+	return 0;
 }
 
-#define TRACE(fmt,...) _trace("% 3d > " fmt, __LINE__,__VA_ARGS__)
+void createData(int cnt)
+{
+	srand((unsigned int)time(NULL));
+	for (int i = 0; i < cnt; i++) {
+		buffer[i] = rand();
+	}
+}
 
-
-int main() {
-	int a = 100;
-	TRACE("&a = %p\n", &a);
-	TRACE("a = %d\n", a);
-	return 0;
-	return 0;
+void showData(int cnt)
+{
+	for (int i = 0; i < cnt; i++) {
+		TRACE("%d\n", buffer[i]);
+	}
 }

@@ -1,19 +1,20 @@
-#include <stdio.h>
+#include "../000_DebugMode/trace.h"
+
 int main() {
 
-	printf("%c\n", 'A');
-	printf("%s\n", "ABC");
+	TRACE("%c\n", 'A');
+	TRACE("%s\n", "ABC");
 
 	//문자의 정수 표현
-	printf("%c\n",65);
+	TRACE("%c\n",65);
 
 	//문자열의 정수 표현
 	char arr[] = { 65, 66, 67,0 };
-	printf("%s\n", &arr);
+	TRACE("%s\n", &arr);
 
 	//메모리 내용을 출력
 	int n = 4407873;
-	printf("%s\n",&n);
+	TRACE("%s\n",&n);
 	
 	return 0;
 }

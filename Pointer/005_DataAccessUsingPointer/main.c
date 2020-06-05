@@ -1,21 +1,5 @@
-#include <stdio.h>
-
-#include <stdarg.h>
-#include <windows.h>
-void _trace(const char* fmt, ...) {
-	char _cbuf[102] = { 0, };
-	va_list args;
-
-	va_start(args, fmt);
-	vsnprintf_s(_cbuf, sizeof(_cbuf), sizeof(_cbuf), fmt, args);
-	va_end(args);
-
-	OutputDebugString(_cbuf);
-
-	printf("%s", _cbuf);
-}
-
-#define TRACE(fmt,...) _trace("% 3d > " fmt, __LINE__,__VA_ARGS__)
+#include "../000_DebugMode/trace.h"
+#include <conio.h>
 
 int main() {
 	/* 일반 변수 초기화 */
@@ -50,6 +34,6 @@ int main() {
 	TRACE("num : %d\n", num);
 	TRACE("*ptr : %d\n", *((int*)0x0019FED8));
 
-	getch();
+	_getch();
 
 }
