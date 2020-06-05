@@ -62,19 +62,6 @@ int main() {
 	//TRACE("ptr->x = %d\n", ptr->x); //오류  void* 해석불가
 	//TRACE("ptr->y = %d\n", ptr->x); //오류  void* 해석불가
 	
-	struct Point* ptptr = ptr; //&pos
-	//
-	TRACE("ptptr = %p\n", ptptr);
-	TRACE("ptptr->x = %d\n", ptptr->x);
-	TRACE("ptptr->y = %d\n", ptptr->x);
-	TRACE("&ptptr->x = %p\n", &ptptr->x);
-	TRACE("&ptptr->y = %p\n", &ptptr->y);
-	//	
-	TRACE("((struct Point*)ptr)->x = %d\n", ((struct Point*)ptr)->x);
-	TRACE("((struct Point*)ptr)->y = %d\n", ((struct Point*)ptr)->y);
-	TRACE("&((struct Point*)ptr)->x = %p\n", &((struct Point*)ptr)->x);
-	TRACE("&((struct Point*)ptr)->y = %p\n", &((struct Point*)ptr)->y);
-	
 	//
 	//다양한 포인터 형 변환에 대하여 
 	//
